@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>LOVE MOM</title>
+    <!-- Bootstrap Core CSS -->
+    <script async="" src="./jsdownload/analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom Fonts -->
+
+    <!-- Theme CSS -->
+
+    <link href="./css/agency.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="https://01bui.blob.core.windows.net/asset-dff4ca4b-ecbe-4b00-8653-466118af16ef/nsk.mp4?sv=2015-07-08&sr=c&si=8f474569-a6c8-4df2-9ddb-a24da7903ebb&sig=HErhkmiXPb7B%2BtYmsx7BBfvo%2B1npaQWEYn0O9mRFFFY%3D&st=2018-04-06T04%3A30%3A38Z&se=2118-06-01T04%3A30%3A38Z" type="video/mp4">
+    </video>
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+        <h1>VR Meditation</h1>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <a id="myBtn" onclick="runVideo()">pause</a>
+    </div>
+    <div id="botWindow" class="contentbot">
+        <iframe style='width:100%;height:100%;' frameborder='0' border='0' src='https://webchat.botframework.com/embed/pregbot?s=GHT7XL0jeqY.cwA.21U.B34Fhn3Cj7TIDv7G8h-aW9SZHkVQknSmWSkBRaAHqaU'></iframe>
+    </div>
+    <div id="textWindow" class="contentbottext">
+        <h1></h1>
+    </div>
+    <script>
+        var frame = document.getElementById('botWindow');
+        var frame_text = document.getElementById('textWindow');
+        frame.style.visibility = "hidden"
+        frame_text.style.visibility = "hidden"
+    </script>
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        function runVideo() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="">About Us</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#contact">Event Map</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header>
+        <link rel="icon" href=./images/favicon-32x32.ico">
+        <div id="particles-js"><canvas class="particles-js-canvas-el" width="1007" height="1323" style="width: 100%; height: 100%;"></canvas></div>
+        <div id="overlay" class="container">
+            <div class="intro-text">
+
+                <center>
+                    <img class="img-responsive" id="logofoot" src="./images/momlove.png" width="50%" alt="logo">
+                    <div class="info-text"><h2 class="section-heading">To be pregnant is to be vitally live again – MoM WebBot provides attentive cares, real-time solution and virtual reality experience for expecting mothers during pregnancy for their physical and mental health.</h2></div>
+                    <br><br>
+                    <div class="buttongroup">
+                        <a onclick="botWindowFunction()" class="btn-xl">BOT</a>
+                        <br>
+                        <a href="http://mushroomfieldvr.azurewebsites.net/" class="btn-xl">Virtual Reality Meditation (Mushroom)</a>
+                        <br>
+                        <a href="http://skyvr.azurewebsites.net/" class="btn-xl">Virtual Reality Meditation (Sky)</a>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <script>
+            function botWindowFunction() {
+                var x = document.getElementById("botWindow");
+                var y = document.getElementById("textWindow");
+                if (x.style.visibility === "hidden") {
+                    x.style.visibility = "visible";
+                    y.style.visibility = "visible";
+                } else {
+                    x.style.visibility = "hidden";
+                    y.style.visibility = "hidden";
+                }
+            }
+        </script>
+    </header>
+    <!-- Team Section -->
+    <section id="sponsors" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center" style="padding-bottom: 5px;">
+                    <h2 class="section-heading">Technologies</h2>
+                </div>
+            </div>
+            <!-- Seciton 1 -->
+            <div class="row">
+                <!--<div class="col-sm-4">
+                    <a href="https://engineering.catholic.edu/" target="_blank"><img src="/images/CUA_logo.png" class="img-responsive bottom30" alt="Catholic U od America EECS"></a>
+                </div>-->
+                >
+                <div class="col-sm-4">
+                    <a href="https://azure.microsoft.com/" target="_blank"><img src="./images/Microsoft_Azure.svg" class="img-responsive bottom30" alt="Microsoft-Azure"></a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.babylonjs.com/" target="_blank"><img src="./images/logo-babylonjs.svg" class="img-responsive bottom30" alt="BabylonJS"></a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-xs-12"><br></div>
+                <div class="col-xs-12 text-center">
+                    <div class="slightly-bigger-font">
+                        The Catholic University of America - School of Engineering    
+                    </div>
+                    <div>
+                        <a href="mailto:32nguyen@cua.edu"> 32nguyen@cua.edu</a>.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Source Code</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a target="_blank" href="https://github.com/32nguyen/"><i class="fa fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Theme JavaScript -->
+    <!--<script src="./agency.min.js.download"></script> -->
+    <script src="./jsdownload/particles.js"></script>
+    <script src="./jsdownload/app.js"></script>
+</body>
+</html>
